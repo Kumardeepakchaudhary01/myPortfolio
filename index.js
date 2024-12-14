@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const nav = document.getElementById('navList');
   const menuBtn = document.getElementById('menuBtn');
-  const navItems = nav.querySelectorAll('li'); // Select all items in the navbar
+  const navItems = document.querySelectorAll('#navList li'); 
 
   // Open the nav when the menu button is clicked
   menuBtn.addEventListener('click', () => {
@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Close the nav when clicking outside of it
   document.addEventListener('click', (event) => {
     if (!nav.contains(event.target) && !menuBtn.contains(event.target)) {
+      console.log("hello");
       nav.classList.remove('hideShow');
     }
   });
@@ -19,7 +20,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // Close the nav when clicking on any nav item
   navItems.forEach((item) => {
     item.addEventListener('click', (event) => {
-        nav.classList.remove('open');
+      setTimeout(()=>{
+        nav.classList.remove('hideShow');
+      },500);
+      
+    });
   });
 });
 
@@ -41,9 +46,9 @@ function socialMediaAcess(prop){
     openNewTab(id,link);
   }else if(prop.id="email"){
     document.getElementById('email').addEventListener('click', function () {
-        const email = "kumardeepakchaudhary01@gmail.com"; // Replace with your email
-        const subject = "Hello!"; // Replace with a default subject if needed
-        const body = "This is the email body."; // Replace with a default message if needed
+        const email = "kumardeepakchaudhary01@gmail.com";
+        const subject = " "; 
+        const body = " ";
         window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
       });
   }
