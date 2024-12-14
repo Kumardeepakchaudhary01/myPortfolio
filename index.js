@@ -1,17 +1,30 @@
 //variable declaration
-const menuBtn = document.getElementById("menuBtn");
-const navList = document.getElementById("navList");
+document.addEventListener('DOMContentLoaded', () => {
+  const nav = document.getElementById('navList');
+  const menuBtn = document.getElementById('menuBtn');
+  const navItems = nav.querySelectorAll('li'); // Select all items in the navbar
 
-menuBtn.addEventListener("click",()=>{
-  navList.classList.toggle("hideShow");
-})
+  // Open the nav when the menu button is clicked
+  menuBtn.addEventListener('click', () => {
+    nav.classList.add('hideShow');
+  });
 
-navList.addEventListener("click",()=>{
-  navList.classList.toggle("hideShow");
-})
-document.getElementById("heroSection").addEventListener("click",()=>{
-  navList.classList.remove("hideShow");
-})
+  // Close the nav when clicking outside of it
+  document.addEventListener('click', (event) => {
+    if (!nav.contains(event.target) && !menuBtn.contains(event.target)) {
+      nav.classList.remove('hideShow');
+    }
+  });
+
+  // Close the nav when clicking on any nav item
+  navItems.forEach((item) => {
+    item.addEventListener('click', () => {
+      nav.classList.remove('hideShow');
+    });
+  });
+});
+
+
 
 
 function socialMediaAcess(prop){
