@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Close the nav when clicking on any nav item
   navItems.forEach((item) => {
-    item.addEventListener('click', () => {
+    item.addEventListener('click', (event) => {
       event.stopPropagation();
       setTimeout(() => {
         nav.classList.remove('open');
