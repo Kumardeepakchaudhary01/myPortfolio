@@ -12,22 +12,6 @@ navList.addEventListener("click",()=>{
 document.getElementById("heroSection").addEventListener("click",()=>{
   navList.classList.remove("hideShow");
 })
-// document.addEventListener('DOMContentLoaded', () => {
-//   const nav = document.getElementById('navList');
-//   const menuBtn = document.querySelector('menuBtn');
-
-//   // Open the nav when the menu button is clicked
-//   menuBtn.addEventListener('click', () => {
-//     nav.classList.add('hideShow');
-//   });
-
-//   // Close the nav when clicking outside of it
-//   document.addEventListener('click', (event) => {
-//     if (!nav.contains(event.target) && !menuBtn.contains(event.target)) {
-//       nav.classList.remove('hideShow');
-//     }
-//   });
-// });
 
 
 function socialMediaAcess(prop){
