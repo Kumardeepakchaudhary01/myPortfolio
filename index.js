@@ -41,7 +41,7 @@ function socialMediaAcess(prop){
     id="ig";
     openNewTab(id,link);
   }else if(prop.id === "linkedin"){
-    const link = "https://www.linkedin.com/in/deepak-kumar-44387928b/";
+    const link = "www.linkedin.com/in/itsdeepakkumar01";
     id="linkedin";
     openNewTab(id,link);
   }else if(prop.id="email"){
