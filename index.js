@@ -19,7 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Close the nav when clicking on any nav item
   navItems.forEach((item) => {
     item.addEventListener('click', () => {
-      nav.classList.remove('hideShow');
+      setTimeout(() => {
+        nav.classList.remove('open');
+      }, 500);
     });
   });
 });
