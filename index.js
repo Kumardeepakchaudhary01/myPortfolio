@@ -9,7 +9,9 @@ menuBtn.addEventListener("click",()=>{
 navList.addEventListener("click",()=>{
   navList.classList.toggle("hideShow");
 })
-
+document.getElementById("heroSection").addEventListener("click",()=>{
+  navList.classList.remove("hideShow");
+})
 
 
 
