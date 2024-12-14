@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New My-Portfolio</title>
+    <link rel="stylesheet" href="index.css" />
+    <!-- Adding font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo"><span>D</span>eveloper</a>
+      <ul class="navbar" id="navList">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contacts</a></li>
+      </ul>
+      <div class="menu-btn" id="menuBtn">
+        <span>INTRO</span>
+        <i id="menu-icon" class="fa-solid fa-bars"></i>
+      </div>
+    </header>
+    <div class="heroSection">
+      <div class="homeInfo">
+        <span>Website Developer</span>
+        <h1>Deepak Kumar</h1>
+        <p>
+          I'm, creative web developer skilled in front-end , delivering
+          innovative and user-friendly websites.
+        </p>
+        <div class="Documentbtn">
+          <a href="Resume.pdf" class="btn">Download CV</a>
+          <a href="#" class="btn two">Hire Me Now</a>
+        </div>
+      </div>
+      <div class="homeImg">
+        <img src="myDp.png" alt="" />
+      </div>
+    </div>
+    <div class="socialMedia">
+      <p>Check out my:</p>
+      <div class="socialLinks">
+        <a href="#" id="linkedin" onclick="socialMediaAcess(this)"
+          ><i class="fa-brands fa-linkedin-in"></i
+        ></a>
+        <a href="#" id="ig" onclick="socialMediaAcess(this)"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a href="#" id="meta" onclick="socialMediaAcess(this)"
+          ><i class="fa-brands fa-meta"></i
+        ></a>
+        <a href="#" id="email" onclick="socialMediaAcess(this)"
+          ><i class="fa-regular fa-envelope"></i
+        ></a>
+      </div>
+    </div>
+
+    <!-- linking script file -->
+    <script src="index.js"></script>
+  </body>
+</html>
