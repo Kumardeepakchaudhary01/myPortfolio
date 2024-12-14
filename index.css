@@ -20,6 +20,7 @@ body {
   background: var(--bg-color);
   color: var(--text-color);
   overflow-x: hidden;
+  user-select: none;
 }
 /* Header section styling */
 
@@ -303,6 +304,7 @@ header {
         align-items: center;
         justify-content: center;
         padding: 20px 0;
+        user-select: none;
 
         &:hover {
           border-top: 1px solid orange;
@@ -377,7 +379,7 @@ header {
     flex-direction: column;
     position: static;
     bottom: 1rem;
-    
+
     .socialLinks {
       margin: 1rem 0;
     }
