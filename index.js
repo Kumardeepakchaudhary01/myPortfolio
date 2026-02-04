@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Close the nav when clicking outside of it
   document.addEventListener('click', (event) => {
     if (!nav.contains(event.target) && !menuBtn.contains(event.target)) {
-      console.log("hello");
+      //console.log("hello");
       nav.classList.remove('hideShow');
     }
   });
@@ -60,5 +60,6 @@ const openNewTab = (id , link) =>{
 }
 
 function test(kuch){
-  console.log(kuch);
+  //console.log(kuch);
 }
+
