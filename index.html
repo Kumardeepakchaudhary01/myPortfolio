@@ -1,71 +1,515 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>New My-Portfolio</title>
-    <link rel="stylesheet" href="index.css" />
-    <!-- Adding font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
-      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-  <body>
-    <header>
-      <a href="#" class="logo"><span>D</span>eveloper</a>
-      <ul class="navbar" id="navList">
-        <li><a href="#" class="active">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Contacts</a></li>
-      </ul>
-      <div class="menu-btn" id="menuBtn">
-        <span>INTRO</span>
-        <i id="menu-icon" class="fa-solid fa-bars"></i>
-      </div>
-    </header>
-    <div class="heroSection" id="heroSection">
-      <div class="homeInfo">
-        <span>Website Developer</span>
-        <h1>Deepak Kumar</h1>
-        <p>
-          I'm, creative web developer skilled in front-end , delivering
-          innovative and user-friendly websites.
-        </p>
-        <div class="Documentbtn">
-          <a href="Resume.pdf" class="btn">Download CV</a>
-          <a href="#" class="btn two">Hire Me Now</a>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio of a MERN Stack Developer and DSA enthusiast seeking global opportunities." />
+  <title>Deepak Kumar | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="site-header">
+      <div class="brand">
+        <span class="logo">DK</span>
+        <div>
+          <div class="name">Deepak Kumar</div>
+          <div class="tag">MERN Stack Developer · DSA Enthusiast</div>
         </div>
       </div>
-      <div class="homeImg">
-        <img src="myDp.png" alt="" />
-      </div>
-    </div>
-    <div class="socialMedia">
-      <p>Check out my:</p>
-      <div class="socialLinks">
-        <a href="#" id="linkedin" onclick="socialMediaAcess(this)"
-          ><i class="fa-brands fa-linkedin-in"></i
-        ></a>
-        <a href="#" id="ig" onclick="socialMediaAcess(this)"
-          ><i class="fa-brands fa-instagram"></i
-        ></a>
-        <a href="#" id="meta" onclick="socialMediaAcess(this)"
-          ><i class="fa-brands fa-meta"></i
-        ></a>
-        <a href="#" id="email" onclick="socialMediaAcess(this)"
-          ><i class="fa-regular fa-envelope"></i
-        ></a>
-      </div>
-    </div>
+      <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav" id="siteNav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#contact" class="cta">Hire Me</a>
+      </nav>
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+        <span>Theme</span>
+      </button>
+    </header>
 
-    <!-- linking script file -->
-    <script src="index.js"></script>
-  </body>
+    <main>
+      <section class="hero" id="top">
+        <div class="hero-content">
+          <p class="eyebrow">Open to Software Engineering Internships · 2027 Graduate</p>
+          <h1>
+            Building fast, secure, and delightful web products
+            with <span>MERN</span> & <span>strong DSA</span>.
+          </h1>
+          <p class="lede">
+            I build full-stack applications with clean architecture and measurable results, backed
+            by strong data structures and algorithms fundamentals. Seeking a software engineering
+            internship to contribute, learn, and grow on a high-performing team.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#projects">View Projects</a>
+            <a class="btn ghost" href="#contact">Contact</a>
+            <a class="btn outline" href="deepak_resume.pdf" download aria-label="Download Resume">Download Resume</a>
+          </div>
+          <div class="hero-stats">
+            <div>
+              <div class="stat">1000+</div>
+              <div class="label">DSA Problems Solved</div>
+            </div>
+            <div>
+              <div class="stat">~1800</div>
+              <div class="label">LeetCode Rating</div>
+            </div>
+            <div>
+              <div class="stat">1st</div>
+              <div class="label">CodeQuest Hackathon</div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-top">
+            <img class="avatar" src="avatar.png" alt="Deepak Kumar avatar" />
+            <div>
+              <div class="card-title">Deepak Kumar</div>
+              <div class="card-sub">B.Tech AI · 3rd Year</div>
+            </div>
+          </div>
+          <p class="hero-card-summary">
+            MERN developer with strong DSA fundamentals. Focused on building clean, scalable
+            products and preparing for global internships.
+          </p>
+          <div class="hero-card-badges">
+            <span class="pill">LeetCode Knight</span>
+            <span class="pill">1000+ Problems</span>
+            <span class="pill">Hackathon Winner🏆</span>
+          </div>
+          <div class="hero-card-body">
+            <div class="chip">React</div>
+            <div class="chip">Node.js</div>
+            <div class="chip">Express</div>
+            <div class="chip">MongoDB</div>
+            <div class="chip">TypeScript</div>
+            <div class="chip">Next.js</div>
+            <div class="chip">Redis</div>
+            <div class="chip">AWS</div>
+          </div>
+          <div class="hero-mini">
+            <div>
+              <div class="label">Email</div>
+              <div class="value">kumardeepakchaudhary01@gmail.com</div>
+            </div>
+            <div>
+              <div class="label">Phone</div>
+              <div class="value">+91 91356 97750</div>
+            </div>
+          </div>
+          <div class="hero-links">
+            <a href="https://linkedin.com/in/itsdeepakkumar01" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://github.com/Kumardeepakchaudhary01" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://deepakportfolio-seven.vercel.app/" target="_blank" rel="noreferrer">Portfolio</a>
+          </div>
+          <div class="hero-focus">
+            <div class="label">Current Focus</div>
+            <div class="focus-row">
+              <span class="pill">MERN Apps</span>
+              <span class="pill">DSA Daily</span>
+              <span class="pill">System Design Basics</span>
+            </div>
+          </div>
+          <div class="hero-quick">
+            <div>
+              <div class="stat-mini">600+</div>
+              <div class="label">LeetCode Solves</div>
+            </div>
+            <div>
+              <div class="stat-mini">1800+</div>
+              <div class="label">LeetCode Rating</div>
+            </div>
+            <div>
+              <div class="stat-mini">4</div>
+              <div class="label">Major Projects</div>
+            </div>
+          </div>
+          <div class="hero-card-footer">
+            <div>
+              <div class="label">Location</div>
+              <div class="value">Vadodara, India · open to relocate</div>
+            </div>
+            <div>
+              <div class="label">Availability</div>
+              <div class="value">Internship · Available now</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="section-header">
+          <h2>About</h2>
+          <p>Focused on clean code, scalable APIs, and interview-grade DSA.</p>
+        </div>
+        <div class="grid two">
+          <div class="card">
+            <h3>Who I am</h3>
+            <p>
+              I’m a third-year B.Tech student in Artificial Intelligence with a strong foundation
+              in Data Structures and Algorithms. I enjoy building practical full-stack apps and
+              solving complex problems through competitive programming.
+            </p>
+            <ul class="bullets">
+              <li>Knight on LeetCode with 600+ problems solved.</li>
+              <li>Strong in DP, graphs, binary search, and greedy methods.</li>
+              <li>Focused on clean engineering and scalable APIs.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>What I’m looking for</h3>
+            <p>
+              A Software Engineering Internship where I can contribute to meaningful products, learn from
+              experienced engineers, and grow as a full-stack developer.
+            </p>
+            <div class="pill-row">
+              <span class="pill">Internship</span>
+              <span class="pill">Remote-first</span>
+              <span class="pill">Relocation</span>
+              <span class="pill">Immediate</span>
+            </div>
+            <div class="quote">
+              “I build with the mindset of an engineer and the curiosity of a learner.”
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="skills">
+        <div class="section-header">
+          <h2>Skills</h2>
+          <p>Balanced full-stack development with algorithmic depth.</p>
+        </div>
+        <div class="grid three">
+          <div class="card">
+            <h3>Languages</h3>
+            <ul class="bullets">
+              <li>C++, JavaScript, Python</li>
+              <li>Strong problem-solving with DSA</li>
+              <li>OOP and basic system design</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Frontend</h3>
+            <ul class="bullets">
+              <li>HTML5, CSS3, JavaScript (ES6)</li>
+              <li>React.js, Bootstrap, Tailwind CSS</li>
+              <li>Responsive UI and component design</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Backend + Tools</h3>
+            <ul class="bullets">
+              <li>Node.js, Express.js, REST APIs</li>
+              <li>MongoDB, MySQL, Firebase</li>
+              <li>Git, GitHub, Postman, VS Code</li>
+            </ul>
+          </div>
+        </div>
+        <div class="skill-matrix">
+          <div class="skill-row">
+            <span>DSA</span>
+            <div class="bar"><span style="width: 90%"></span></div>
+            <span>Advanced</span>
+          </div>
+          <div class="skill-row">
+            <span>System Design</span>
+            <div class="bar"><span style="width: 60%"></span></div>
+            <span>Intermediate</span>
+          </div>
+          <div class="skill-row">
+            <span>Full Stack</span>
+            <div class="bar"><span style="width: 78%"></span></div>
+            <span>Advanced</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="section-header">
+          <h2>Projects</h2>
+          <p>Shipped products with measurable outcomes. Filter by stack.</p>
+        </div>
+        <div class="filters" role="tablist">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="mern">MERN</button>
+          <button class="filter" data-filter="react">React</button>
+          <button class="filter" data-filter="backend">Backend</button>
+        </div>
+        <div class="grid three project-grid">
+          <article class="card project" data-tags="mern backend">
+            <div class="project-head">
+              <h3>Code Submission & Evaluation Platform</h3>
+              <span class="badge">MERN</span>
+            </div>
+            <p>Web-based system to compile and test C++ code against custom test cases.</p>
+            <ul class="bullets">
+              <li>Built backend for code execution and result validation.</li>
+              <li>Implemented robust input/output matching and error handling.</li>
+            </ul>
+            <div class="project-foot">
+              <span>React · Node · Express · MongoDB</span>
+              <a href="#">GitHub</a>
+            </div>
+          </article>
+          <article class="card project" data-tags="mern react">
+            <div class="project-head">
+              <h3>Smart Task Manager</h3>
+              <span class="badge">MERN</span>
+            </div>
+            <p>Priority-based task manager with dynamic scheduling and drag-and-drop workflows.</p>
+            <ul class="bullets">
+              <li>Designed algorithms to prioritize tasks by deadline and importance.</li>
+              <li>Built REST APIs for all CRUD operations.</li>
+            </ul>
+            <div class="project-foot">
+              <span>React · Node · MongoDB · Tailwind</span>
+              <a href="#">GitHub</a>
+            </div>
+          </article>
+          <article class="card project" data-tags="react">
+            <div class="project-head">
+              <h3>DSA Visualizer</h3>
+              <span class="badge">React</span>
+            </div>
+            <p>Interactive platform to visualize data structures and algorithms step-by-step.</p>
+            <ul class="bullets">
+              <li>Implemented sorting, searching, BFS/DFS animations.</li>
+              <li>Modular React components for reusable visualizations.</li>
+            </ul>
+            <div class="project-foot">
+              <span>React · JavaScript · HTML/CSS</span>
+              <a href="#">GitHub</a>
+            </div>
+          </article>
+          <article class="card project" data-tags="backend">
+            <div class="project-head">
+              <h3>REST API Playground</h3>
+              <span class="badge">Backend</span>
+            </div>
+            <p>Collection of production-grade REST endpoints for user auth and data management.</p>
+            <ul class="bullets">
+              <li>JWT auth, validation, and rate limiting.</li>
+              <li>Postman collections and documentation.</li>
+            </ul>
+            <div class="project-foot">
+              <span>Node · Express · MongoDB</span>
+              <a href="#">GitHub</a>
+            </div>
+          </article>
+          <article class="card project" data-tags="mern">
+            <div class="project-head">
+              <h3>Problem Tracker</h3>
+              <span class="badge">MERN</span>
+            </div>
+            <p>Personal tracker for DSA problems, notes, and difficulty analytics.</p>
+            <ul class="bullets">
+              <li>Filters by topic and difficulty.</li>
+              <li>Progress insights for weekly goals.</li>
+            </ul>
+            <div class="project-foot">
+              <span>React · Node · MongoDB</span>
+              <a href="#">Live Demo</a>
+            </div>
+          </article>
+          <article class="card project" data-tags="react">
+            <div class="project-head">
+              <h3>Portfolio Website</h3>
+              <span class="badge">UI</span>
+            </div>
+            <p>Modern, responsive portfolio showcasing skills, projects, and achievements.</p>
+            <ul class="bullets">
+              <li>Premium design system with animations.</li>
+              <li>Optimized for recruiters and global roles.</li>
+            </ul>
+            <div class="project-foot">
+              <span>HTML · CSS · JavaScript</span>
+              <a href="#">Live Demo</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="experience">
+        <div class="section-header">
+          <h2>Experience & Involvement</h2>
+          <p>Hands-on collaboration, problem-solving, and community contributions.</p>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="time">2024 – Present</div>
+            <h3>Active Member · College Coding Club</h3>
+            <p>Participate in DSA discussions and problem-solving sessions with peers.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="time">Ongoing</div>
+            <h3>Competitive Programming</h3>
+            <p>Regularly participate in coding contests to sharpen analytical thinking.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="time">Ongoing</div>
+            <h3>Community Support</h3>
+            <p>Contribute to coding forums and help peers debug challenging problems.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="achievements">
+        <div class="section-header">
+          <h2>Technical Highlights</h2>
+          <p>Competitive programming wins and algorithm mastery.</p>
+        </div>
+        <div class="grid three">
+          <div class="card">
+            <h3>LeetCode Knight</h3>
+            <p>~1800 rating with 600+ problems solved across multiple difficulty levels.</p>
+          </div>
+          <div class="card">
+            <h3>CodeQuest Hackathon</h3>
+            <p>1st 🏆 place among 250+ participants with optimized C++ solutions.</p>
+          </div>
+          <div class="card">
+            <h3>Algorithmic Strength</h3>
+            <p>Strong in DP, graphs, binary search, and greedy methods.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="education">
+        <div class="section-header">
+          <h2>Education</h2>
+          <p>Academic foundation with an AI and CS focus.</p>
+        </div>
+        <div class="card">
+          <h3>B.Tech in Artificial Intelligence</h3>
+          <p>Parul Institute of Technology, Vadodara · Expected May 2027</p>
+          <div class="pill-row">
+            <span class="pill">Data Structures</span>
+            <span class="pill">Algorithms</span>
+            <span class="pill">OOP</span>
+            <span class="pill">DBMS</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="section-header">
+          <h2>Let’s Build Together</h2>
+          <p>Available for Software Engineering Internships.</p>
+        </div>
+        <div class="grid two">
+          <div class="card contact-card">
+            <h3>Contact</h3>
+            <p class="contact-lede">Let’s connect for internships, collaborations, or referrals.</p>
+            <div class="contact-list">
+              <div class="contact-item">
+                <span class="contact-label">Email</span>
+                <a href="mailto:kumardeepakchaudhary01@gmail.com" class="contact-value">kumardeepakchaudhary01@gmail.com</a>
+              </div>
+              <div class="contact-item">
+                <span class="contact-label">Phone</span>
+                <a href="tel:+919135697750" class="contact-value">+91 91356 97750</a>
+              </div>
+              <div class="contact-item">
+                <span class="contact-label">LinkedIn</span>
+                <a href="https://linkedin.com/in/itsdeepakkumar01" target="_blank" rel="noreferrer" class="contact-value">linkedin.com/in/itsdeepakkumar01</a>
+              </div>
+              <div class="contact-item">
+                <span class="contact-label">GitHub</span>
+                <a href="https://github.com/Kumardeepakchaudhary01" target="_blank" rel="noreferrer" class="contact-value">github.com/Kumardeepakchaudhary01</a>
+              </div>
+              <div class="contact-item">
+                <span class="contact-label">Portfolio</span>
+                <a href="https://deepakportfolio-seven.vercel.app/" target="_blank" rel="noreferrer" class="contact-value">itsdeepakportfolio.vercel.app</a>
+              </div>
+              <div class="contact-item">
+                <span class="contact-label">Location</span>
+                <span class="contact-value">Vadodara, India · Open to relocate</span>
+              </div>
+            </div>
+            <div class="pill-row contact-pills">
+              <span class="pill">Internship</span>
+              <span class="pill">Remote</span>
+              <span class="pill">Relocation</span>
+              <span class="pill">Immediate</span>
+            </div>
+            <div class="contact-actions">
+              <a class="btn primary" href="deepak_resume.pdf" download aria-label="Download Resume">Download Resume</a>
+              <a class="btn outline" href="mailto:kumardeepakchaudhary01@gmail.com">Email Me</a>
+            </div>
+          </div>
+          <form class="card contact-form" id="contactForm">
+            <div class="contact-form-head">
+              <h3>Quick Message</h3>
+              <p>Send a note and I’ll reply within 24 hours.</p>
+            </div>
+            <div class="contact-form-grid">
+              <label>
+                Name
+                <input type="text" name="from_name" placeholder="Your name" required />
+              </label>
+              <label>
+                Email
+                <input type="email" name="reply_to" placeholder="you@company.com" required />
+              </label>
+            </div>
+            <label>
+              Message
+              <textarea rows="5" name="message" placeholder="Tell me about the role..." required></textarea>
+            </label>
+            <div class="contact-form-extras">
+              <div class="contact-info-card">
+                <div class="label">What You’ll Get</div>
+                <ul class="bullets">
+                  <li>Clear, prompt response within 24 hours</li>
+                  <li>Well-structured updates and timelines</li>
+                  <li>Engineering mindset and clean execution</li>
+                </ul>
+              </div>
+              <div class="contact-info-card">
+                <div class="label">Availability</div>
+                <p>Internship ready · Open to remote or relocation</p>
+                <div class="pill-row mini-pills">
+                  <span class="pill">MERN</span>
+                  <span class="pill">DSA</span>
+                  <span class="pill">Clean UI</span>
+                </div>
+              </div>
+            </div>
+            <div class="contact-form-actions">
+              <button class="btn primary" type="submit">Send Message</button>
+              <span class="form-status" id="formStatus">Ready to send</span>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>
+        <div class="name">Deepak Kumar</div>
+        <div class="tag">MERN + DSA · Open to internship roles</div>
+      </div>
+      <div class="footer-links">
+        <a href="deepak_resume.pdf" download>Resume</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button class="back-to-top" id="backToTop">Back to Top</button>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="script.js"></script>
+</body>
 </html>
